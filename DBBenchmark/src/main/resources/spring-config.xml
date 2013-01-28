@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+
+    <!--<jee:jndi-lookup jndi-name="jdbc/mysql" id="mySQLDataSource" expected-type="javax.sql.DataSource"/>-->
+
+    <bean id="testTableDao" class="com.sitronics.it.dbbenchmark.TestTableDao">
+        <property name="dataSource" ref="mysqlLocalDatasource"/>
+        <property name="queryText" value="SELECT * FROM test.yo WHERE some_str LIKE :some_str"/>
+        <property name="idColumnName" value="id"/>
+        <property name="dateColumnName" value="some_date"/>
+        <property name="strColumnName" value="some_str"/>
+    </bean>
+
+    <bean id="mysqlLocalDatasource" class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
+        <property name="user" value="root"/>
+        <property name="password" value=""/>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+        <property name="characterEncoding" value="Utf-8"/>
+    </bean>
+</beans>

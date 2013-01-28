@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-aop-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-aspects-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-beans-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-context-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-build-src-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-context-support-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-core-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-expression-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-instrument-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-instrument-tomcat-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-jdbc-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-jms-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-orm-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-oxm-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-struts-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-test-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-tx-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-web-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-webmvc-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/spring-webmvc-portlet-3.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/mysql-connector-java-5.1.22-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBBenchmark/lib/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/DBBenchmark/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/DBBenchmark/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
