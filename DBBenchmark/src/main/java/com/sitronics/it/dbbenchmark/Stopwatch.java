@@ -11,23 +11,34 @@ import java.util.List;
 enum Stopwatch {
     INSTANCE;
 
-    private List<Measure> measureList = new ArrayList<Measure>();
-    public void addMeasure(Measure measure) {
-        measureList.add(measure);
+    private List<Measurement> measurementList = new ArrayList<Measurement>();
+    public void addMeasure(Measurement measurement) {
+        measurementList.add(measurement);
     }
 
     public void clearMeasures() {
-        measureList.clear();
+        measurementList.clear();
     }
 
-    public List<Measure> getMeasureList() {
-        return measureList;
+    public List<Measurement> getMeasurementList() {
+        return measurementList;
     }
 
-    public static class Measure {
+    public List<Measurement> getMeasureListByBatch(int batchNum) {
+        List<Measurement> list = new ArrayList<Measurement>();
+        for (Measurement measurement : measurementList) {
+            if (measurement.getBatchNum() == batchNum) list.add(measurement);
+        }
+        return list;
+    }
+
+    /*
+     * Class hold single measurement
+     */
+    public static class Measurement {
         private long startTime, endTime;
         private int batchNum;
-        private String measureId;
+        private String measurementId;
         private Date elapsedTime;
 
 
@@ -39,17 +50,17 @@ enum Stopwatch {
             this.batchNum = batchNum;
         }
 
-        public String getMeasureId() {
-            return measureId;
+        public String getMeasurementId() {
+            return measurementId;
         }
 
-        public void setMeasureId(String measureId) {
-            this.measureId = measureId;
+        public void setMeasurementId(String measurementId) {
+            this.measurementId = measurementId;
         }
 
-        public Measure(int batchNum, String measureId) {
+        public Measurement(int batchNum, String measurementId) {
             this.batchNum = batchNum;
-            this.measureId = measureId;
+            this.measurementId = measurementId;
             elapsedTime = new Date();
         }
 
