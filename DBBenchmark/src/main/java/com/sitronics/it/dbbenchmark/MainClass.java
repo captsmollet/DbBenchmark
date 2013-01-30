@@ -17,7 +17,7 @@ public class MainClass {
 
         TestTableDao dao = context.getBean("testTableDao", TestTableDao.class);
         TestObject obj = new TestObject();
-        obj.setSome_str("%ручкой%");
+        obj.setSome_str("%жо%");
 //        obj.setId(5046197);
         Stopwatch.Measurement measurement = new Stopwatch.Measurement(1, "basic test");
         measurement.setStartTime(System.currentTimeMillis());
@@ -32,9 +32,8 @@ public class MainClass {
         for (TestObject o : list) {
             System.out.println(o.toString());
         }
-        Calendar cal = GregorianCalendar.getInstance();
-        cal.setTimeInMillis(measurement.getElapsedTimeLong());
-        System.out.printf("Elapsed time %1$tM:%1$tS,%1$tL\n", cal);
+        System.out.println(measurement.getElapsedTimeFormatted());
+        System.out.println(Stopwatch.INSTANCE.getMeasureListByBatch(1).get(0).getElapsedTimeFormatted());
 
     }
 }

@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Singleton
@@ -11,7 +12,7 @@ import java.util.List;
 enum Stopwatch {
     INSTANCE;
 
-    private List<Measurement> measurementList = new ArrayList<Measurement>();
+    private List<Measurement> measurementList = new Vector<Measurement>();
     public void addMeasure(Measurement measurement) {
         measurementList.add(measurement);
     }
@@ -82,7 +83,8 @@ enum Stopwatch {
         }
 
         public String getElapsedTimeFormatted() {
-            return DateFormat.getTimeInstance(DateFormat.MILLISECOND_FIELD).format(elapsedTime);
+            return String.format("%1$tM:%1$tS,%1$tL", elapsedTime);
+
         }
 
         public long getElapsedTimeLong() {
