@@ -33,7 +33,7 @@ enum Stopwatch {
     }
 
     /*
-     * Class hold single measurement
+     * Class holds single measurement
      */
     public static class Measurement {
         private long startTime, endTime;

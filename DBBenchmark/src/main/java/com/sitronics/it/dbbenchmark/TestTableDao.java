@@ -19,7 +19,6 @@ public class TestTableDao extends NamedParameterJdbcDaoSupport {
     private String strColumnName;
 
     private String queryText;                    // "SELECT * FROM yo";
-    private long startTime, endTime = 0;
 
     public String getQueryText() {
         return queryText;
@@ -29,29 +28,13 @@ public class TestTableDao extends NamedParameterJdbcDaoSupport {
         this.queryText = queryText;
     }
 
-    void startTimer() {
-        startTime = System.nanoTime();
-    }
-
-    void stopTimer() {
-        endTime = System.nanoTime();
-    }
-
-    long getElapsedNanos() {
-        return endTime - startTime;
-    }
-
     List<TestObject> findTestObject(TestObject obj) {
-
-        startTimer();
 
         // construct query parameter map from bean's properties
         SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(obj);
 
         // send query and get result mapped to a bean
         List<TestObject> list = getNamedParameterJdbcTemplate().query(queryText, parameterSource, new TestObjectMapper());
-
-        stopTimer();
 
         return list;
     }
