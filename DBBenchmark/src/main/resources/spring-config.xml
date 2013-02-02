@@ -13,6 +13,7 @@
         <property name="strColumnName" value="some_str"/>
     </bean>
 
+
     <bean id="mysqlLocalDatasource" class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
         <property name="user" value="root"/>
         <property name="password" value=""/>
